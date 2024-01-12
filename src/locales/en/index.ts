@@ -10,8 +10,8 @@ import { Component, ParsedResult, ParsingOption, ParsingReference, Meridiem, Wee
 
 import ENDefaultConfiguration from "./configuration";
 
-export { Chrono, Parser, Refiner, ParsingResult, ParsingComponents, ReferenceWithTimezone };
-export { Component, ParsedResult, ParsingOption, ParsingReference, Meridiem, Weekday };
+// export { Chrono, Parser, Refiner, ParsingResult, ParsingComponents, ReferenceWithTimezone };
+// export { Component, ParsedResult, ParsingOption, ParsingReference, Meridiem, Weekday };
 
 export const configuration = new ENDefaultConfiguration();
 
@@ -23,23 +23,23 @@ export const casual = new Chrono(configuration.createCasualConfiguration(false))
 /**
  * Chrono object configured for parsing *strict* English
  */
-export const strict = new Chrono(configuration.createConfiguration(true, false));
+// export const strict = new Chrono(configuration.createConfiguration(true, false));
 
 /**
  * Chrono object configured for parsing *UK-style* English
  */
-export const GB = new Chrono(configuration.createCasualConfiguration(true));
+// export const GB = new Chrono(configuration.createCasualConfiguration(true));
 
 /**
  * A shortcut for en.casual.parse()
  */
-export function parse(text: string, ref?: Date, option?: ParsingOption): ParsedResult[] {
-    return casual.parse(text, ref, option);
-}
+// export function parse(text: string, ref?: Date, option?: ParsingOption): ParsedResult[] {
+//     return casual.parse(text, ref, option);
+// }
 
 /**
  * A shortcut for en.casual.parseDate()
  */
-export function parseDate(text: string, ref?: Date, option?: ParsingOption): Date {
-    return casual.parseDate(text, ref, option);
-}
+// export function parseDate(text: string, ref?: Date, option?: ParsingOption): Date {
+//     return casual.parseDate(text, ref, option);
+// }

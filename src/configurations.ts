@@ -13,13 +13,13 @@ export function includeCommonConfiguration(configuration: Configuration, strictM
 
     configuration.refiners.unshift(new MergeWeekdayComponentRefiner());
     configuration.refiners.unshift(new ExtractTimezoneOffsetRefiner());
-    configuration.refiners.unshift(new OverlapRemovalRefiner());
+    // configuration.refiners.unshift(new OverlapRemovalRefiner());
 
     // Unlike ExtractTimezoneOffsetRefiner, this refiner relies on knowing both date and time in cases where the tz
     // is ambiguous (in terms of DST/non-DST). It therefore needs to be applied as late as possible in the parsing.
     configuration.refiners.push(new ExtractTimezoneAbbrRefiner());
     configuration.refiners.push(new OverlapRemovalRefiner());
-    configuration.refiners.push(new ForwardDateRefiner());
+    // configuration.refiners.push(new ForwardDateRefiner());
     configuration.refiners.push(new UnlikelyFormatFilter(strictMode));
     return configuration;
 }
