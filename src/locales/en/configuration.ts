@@ -32,7 +32,7 @@ export default class ENDefaultConfiguration {
     createCasualConfiguration(littleEndian = false): Configuration {
         const option = this.createConfiguration(false, littleEndian);
         option.parsers.push(new ENCasualDateParser());
-        option.parsers.push(new ENCasualTimeParser());
+        // option.parsers.push(new ENCasualTimeParser());
         option.parsers.push(new ENMonthNameParser());
         option.parsers.push(new ENRelativeDateFormatParser());
         option.parsers.push(new ENTimeUnitCasualRelativeFormatParser());
@@ -53,10 +53,10 @@ export default class ENDefaultConfiguration {
                     new ENTimeUnitWithinFormatParser(strictMode),
                     new ENMonthNameLittleEndianParser(),
                     new ENMonthNameMiddleEndianParser(/*shouldSkipYearLikeDate=*/ littleEndian),
-                    new ENWeekdayParser(),
+                    // new ENWeekdayParser(),
                     new ENCasualYearMonthDayParser(),
-                    new ENSlashMonthFormatParser(),
-                    new ENTimeExpressionParser(strictMode),
+                    // new ENSlashMonthFormatParser(),
+                    // new ENTimeExpressionParser(strictMode),
                     new ENTimeUnitAgoFormatParser(strictMode),
                     new ENTimeUnitLaterFormatParser(strictMode),
                 ],
